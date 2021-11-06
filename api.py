@@ -1,6 +1,5 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
-import os
 
 app = Flask(__name__)
 api = Api(app)
@@ -19,5 +18,4 @@ class BookCoverService(Resource):
 api.add_resource(BookCoverService, '/book')
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 4000))
-    app.run(port=port, debug=True)
+    app.run(port=4000, debug=True)
